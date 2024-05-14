@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/BuyAProduct.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract EcommercePlatform {\n    address payable public owner;\n    mapping(address => uint256) public productPrices;\n    mapping(address => mapping(address => uint256)) public productQuantities; // Adjusted mapping\n\n    event ProductPurchased(address indexed buyer, uint256 quantity, uint256 totalPrice);\n    event ProductAdded(address indexed product, uint256 quantity, uint256 price);\n\n    error InsufficientFunds();\n    error ProductNotAvailable();\n\n    constructor() {\n        owner = payable(msg.sender);\n    }\n\n    /**\n     * @dev Function to purchase a product\n     * @param product The address of the product\n     * @param quantity The quantity of the product to purchase\n     */\n    function purchaseProduct(address product, uint256 quantity) public payable {\n        uint256 totalPrice = productPrices[product] * quantity;\n        require(msg.value >= totalPrice, \"Insufficient funds\");\n\n        if (productQuantities[product][msg.sender] < quantity) {\n            revert ProductNotAvailable();\n        }\n\n        owner.transfer(totalPrice);\n\n        productQuantities[product][msg.sender] -= quantity;\n\n        emit ProductPurchased(msg.sender, quantity, totalPrice);\n    }\n\n    /**\n     * @dev Function to add product quantities\n     * @param product The address of the product\n     * @param quantity The quantity of the product to add\n     * @param price The price of the product\n     */\n    function addProductQuantity(address product, uint256 quantity, uint256 price) public {\n        productQuantities[product][msg.sender] += quantity;\n        productPrices[product] = price;\n        emit ProductAdded(product, quantity, price);\n    }\n\n    /**\n     * @dev Function to withdraw the contract balance\n     */\n    function withdraw() public {\n        require(msg.sender == owner, \"Only the owner can withdraw\");\n        owner.transfer(address(this).balance);\n    }\n\n    /**\n     * @dev Function to get the contract balance\n     */\n    function getBalance() public view returns (uint256) {\n        return address(this).balance;\n    }\n\n    /**\n     * @dev Fallback function to receive Ether\n     */\n    receive() external payable {}\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

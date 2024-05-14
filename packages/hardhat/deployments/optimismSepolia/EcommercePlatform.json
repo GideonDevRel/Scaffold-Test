@@ -1,0 +1,322 @@
+{
+  "address": "0xCC57e658e19D9891e1657730AB8010c7f3Dba3d4",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "InsufficientFunds",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ProductNotAvailable",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "product",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "quantity",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProductAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "product",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "buyer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "quantity",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "totalPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProductPurchased",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "product",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "quantity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "addProductQuantity",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "productPrices",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "productQuantities",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "product",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "quantity",
+          "type": "uint256"
+        }
+      ],
+      "name": "purchaseProduct",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0xe1d604c65473e6d2680e96d059661148d65a009c68ba6a97187ff257b702e155",
+  "receipt": {
+    "to": null,
+    "from": "0x571361CEEd12FA93428BAC5F2168cA6f1D71F72E",
+    "contractAddress": "0xCC57e658e19D9891e1657730AB8010c7f3Dba3d4",
+    "transactionIndex": 11,
+    "gasUsed": "478310",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x124f7e93bec2ae9c1147df727aa078dd79d8752d3f5ced3af7c56c29e0237fe8",
+    "transactionHash": "0xe1d604c65473e6d2680e96d059661148d65a009c68ba6a97187ff257b702e155",
+    "logs": [],
+    "blockNumber": 11934766,
+    "cumulativeGasUsed": "6067884",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 3,
+  "solcInputHash": "a872496722ecdb67f595ae315d6216fa",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"InsufficientFunds\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ProductNotAvailable\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"product\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantity\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"ProductAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"product\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"buyer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantity\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"totalPrice\",\"type\":\"uint256\"}],\"name\":\"ProductPurchased\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"product\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"quantity\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"addProductQuantity\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"productPrices\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"productQuantities\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"product\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"quantity\",\"type\":\"uint256\"}],\"name\":\"purchaseProduct\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addProductQuantity(string,uint256,uint256)\":{\"details\":\"Function to add product quantities\",\"params\":{\"price\":\"The price of the product\",\"product\":\"The name of the product\",\"quantity\":\"The quantity of the product to add\"}},\"getBalance()\":{\"details\":\"Function to get the contract balance\"},\"purchaseProduct(string,uint256)\":{\"details\":\"Function to purchase a product\",\"params\":{\"product\":\"The name of the product\",\"quantity\":\"The quantity of the product to purchase\"}},\"withdraw()\":{\"details\":\"Function to withdraw the contract balance\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/BuyAProduct.sol\":\"EcommercePlatform\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/BuyAProduct.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ncontract EcommercePlatform {\\n    address payable public owner;\\n    mapping(string => uint256) public productPrices; \\n    mapping(string => mapping(address => uint256)) public productQuantities;\\n\\n    event ProductPurchased(string  product, address indexed buyer, uint256 quantity, uint256 totalPrice); \\n    event ProductAdded(string  product, uint256 quantity, uint256 price); \\n\\n    error InsufficientFunds();\\n    error ProductNotAvailable();\\n\\n    constructor() {\\n        owner = payable(msg.sender);\\n    }\\n\\n    /**\\n     * @dev Function to purchase a product\\n     * @param product The name of the product\\n     * @param quantity The quantity of the product to purchase\\n     */\\n    function purchaseProduct(string memory product, uint256 quantity) public payable {\\n        uint256 totalPrice = productPrices[product] * quantity;\\n        require(msg.value >= totalPrice, \\\"Insufficient funds\\\");\\n\\n        if (productQuantities[product][msg.sender] < quantity) {\\n            revert ProductNotAvailable();\\n        }\\n\\n        owner.transfer(totalPrice);\\n\\n        productQuantities[product][msg.sender] -= quantity;\\n\\n        emit ProductPurchased(product, msg.sender, quantity, totalPrice);\\n    }\\n\\n    /**\\n     * @dev Function to add product quantities\\n     * @param product The name of the product\\n     * @param quantity The quantity of the product to add\\n     * @param price The price of the product\\n     */\\n    function addProductQuantity(string memory product, uint256 quantity, uint256 price) public {\\n        productQuantities[product][msg.sender] += quantity;\\n        productPrices[product] = price;\\n        emit ProductAdded(product, quantity, price);\\n    }\\n\\n    /**\\n     * @dev Function to withdraw the contract balance\\n     */\\n    function withdraw() public {\\n        require(msg.sender == owner, \\\"Only the owner can withdraw\\\");\\n        owner.transfer(address(this).balance);\\n    }\\n\\n    /**\\n     * @dev Function to get the contract balance\\n     */\\n    function getBalance() public view returns (uint256) {\\n        return address(this).balance;\\n    }\\n\\n    /**\\n     * @dev Fallback function to receive Ether\\n     */\\n    receive() external payable {}\\n}\\n\",\"keccak256\":\"0x5edfced2438cd2d81a294ce62fb2fc9cf4a13d92d848690f368e7e247c8477da\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50600080546001600160a01b03191633179055610749806100326000396000f3fe6080604052600436106100745760003560e01c80636cb478331161004e5780636cb47833146100f55780638da5cb5b1461013d5780638f736ebf14610175578063eca50ce71461019557600080fd5b8063086aa1721461008057806312065fe0146100cb5780633ccfd60b146100de57600080fd5b3661007b57005b600080fd5b34801561008c57600080fd5b506100b861009b36600461050a565b805160208183018101805160018252928201919093012091525481565b6040519081526020015b60405180910390f35b3480156100d757600080fd5b50476100b8565b3480156100ea57600080fd5b506100f36101a8565b005b34801561010157600080fd5b506100b8610110366004610547565b81516020818401810180516002825292820194820194909420919093529091526000908152604090205481565b34801561014957600080fd5b5060005461015d906001600160a01b031681565b6040516001600160a01b0390911681526020016100c2565b34801561018157600080fd5b506100f36101903660046105a5565b610244565b6100f36101a33660046105f3565b6102ea565b6000546001600160a01b031633146102075760405162461bcd60e51b815260206004820152601b60248201527f4f6e6c7920746865206f776e65722063616e207769746864726177000000000060448201526064015b60405180910390fd5b600080546040516001600160a01b03909116914780156108fc02929091818181858888f19350505050158015610241573d6000803e3d6000fd5b50565b81600284604051610255919061065c565b908152604080516020928190038301902033600090815292528120805490919061028090849061068e565b9250508190555080600184604051610298919061065c565b9081526020016040518091039020819055507faf15189af1861da85d7d959da20a528553cf2d64fc75f6fc7f6894097e9e9cf18383836040516102dd939291906106a7565b60405180910390a1505050565b6000816001846040516102fd919061065c565b90815260200160405180910390205461031691906106e9565b90508034101561035d5760405162461bcd60e51b8152602060048201526012602482015271496e73756666696369656e742066756e647360701b60448201526064016101fe565b8160028460405161036e919061065c565b9081526040805160209281900383019020336000908152925290205410156103a9576040516376e6aa7160e11b815260040160405180910390fd5b600080546040516001600160a01b039091169183156108fc02918491818181858888f193505050501580156103e2573d6000803e3d6000fd5b50816002846040516103f4919061065c565b908152604080516020928190038301902033600090815292528120805490919061041f908490610700565b909155505060405133907f46cb9a445bdbf7226e270f694cc6028862dd31e7cc36ac973160deb5d5b4f9409061045a908690869086906106a7565b60405180910390a2505050565b634e487b7160e01b600052604160045260246000fd5b600082601f83011261048e57600080fd5b813567ffffffffffffffff808211156104a9576104a9610467565b604051601f8301601f19908116603f011681019082821181831017156104d1576104d1610467565b816040528381528660208588010111156104ea57600080fd5b836020870160208301376000602085830101528094505050505092915050565b60006020828403121561051c57600080fd5b813567ffffffffffffffff81111561053357600080fd5b61053f8482850161047d565b949350505050565b6000806040838503121561055a57600080fd5b823567ffffffffffffffff81111561057157600080fd5b61057d8582860161047d565b92505060208301356001600160a01b038116811461059a57600080fd5b809150509250929050565b6000806000606084860312156105ba57600080fd5b833567ffffffffffffffff8111156105d157600080fd5b6105dd8682870161047d565b9660208601359650604090950135949350505050565b6000806040838503121561060657600080fd5b823567ffffffffffffffff81111561061d57600080fd5b6106298582860161047d565b95602094909401359450505050565b60005b8381101561065357818101518382015260200161063b565b50506000910152565b6000825161066e818460208701610638565b9190910192915050565b634e487b7160e01b600052601160045260246000fd5b808201808211156106a1576106a1610678565b92915050565b60608152600084518060608401526106c6816080850160208901610638565b60208301949094525060408101919091526080601f909201601f19160101919050565b80820281158282048414176106a1576106a1610678565b818103818111156106a1576106a161067856fea26469706673582212207dc0e6d5b87fbe6f4674a34f2141b8043a5309a0721a8cce99a8c48b95299e4564736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600436106100745760003560e01c80636cb478331161004e5780636cb47833146100f55780638da5cb5b1461013d5780638f736ebf14610175578063eca50ce71461019557600080fd5b8063086aa1721461008057806312065fe0146100cb5780633ccfd60b146100de57600080fd5b3661007b57005b600080fd5b34801561008c57600080fd5b506100b861009b36600461050a565b805160208183018101805160018252928201919093012091525481565b6040519081526020015b60405180910390f35b3480156100d757600080fd5b50476100b8565b3480156100ea57600080fd5b506100f36101a8565b005b34801561010157600080fd5b506100b8610110366004610547565b81516020818401810180516002825292820194820194909420919093529091526000908152604090205481565b34801561014957600080fd5b5060005461015d906001600160a01b031681565b6040516001600160a01b0390911681526020016100c2565b34801561018157600080fd5b506100f36101903660046105a5565b610244565b6100f36101a33660046105f3565b6102ea565b6000546001600160a01b031633146102075760405162461bcd60e51b815260206004820152601b60248201527f4f6e6c7920746865206f776e65722063616e207769746864726177000000000060448201526064015b60405180910390fd5b600080546040516001600160a01b03909116914780156108fc02929091818181858888f19350505050158015610241573d6000803e3d6000fd5b50565b81600284604051610255919061065c565b908152604080516020928190038301902033600090815292528120805490919061028090849061068e565b9250508190555080600184604051610298919061065c565b9081526020016040518091039020819055507faf15189af1861da85d7d959da20a528553cf2d64fc75f6fc7f6894097e9e9cf18383836040516102dd939291906106a7565b60405180910390a1505050565b6000816001846040516102fd919061065c565b90815260200160405180910390205461031691906106e9565b90508034101561035d5760405162461bcd60e51b8152602060048201526012602482015271496e73756666696369656e742066756e647360701b60448201526064016101fe565b8160028460405161036e919061065c565b9081526040805160209281900383019020336000908152925290205410156103a9576040516376e6aa7160e11b815260040160405180910390fd5b600080546040516001600160a01b039091169183156108fc02918491818181858888f193505050501580156103e2573d6000803e3d6000fd5b50816002846040516103f4919061065c565b908152604080516020928190038301902033600090815292528120805490919061041f908490610700565b909155505060405133907f46cb9a445bdbf7226e270f694cc6028862dd31e7cc36ac973160deb5d5b4f9409061045a908690869086906106a7565b60405180910390a2505050565b634e487b7160e01b600052604160045260246000fd5b600082601f83011261048e57600080fd5b813567ffffffffffffffff808211156104a9576104a9610467565b604051601f8301601f19908116603f011681019082821181831017156104d1576104d1610467565b816040528381528660208588010111156104ea57600080fd5b836020870160208301376000602085830101528094505050505092915050565b60006020828403121561051c57600080fd5b813567ffffffffffffffff81111561053357600080fd5b61053f8482850161047d565b949350505050565b6000806040838503121561055a57600080fd5b823567ffffffffffffffff81111561057157600080fd5b61057d8582860161047d565b92505060208301356001600160a01b038116811461059a57600080fd5b809150509250929050565b6000806000606084860312156105ba57600080fd5b833567ffffffffffffffff8111156105d157600080fd5b6105dd8682870161047d565b9660208601359650604090950135949350505050565b6000806040838503121561060657600080fd5b823567ffffffffffffffff81111561061d57600080fd5b6106298582860161047d565b95602094909401359450505050565b60005b8381101561065357818101518382015260200161063b565b50506000910152565b6000825161066e818460208701610638565b9190910192915050565b634e487b7160e01b600052601160045260246000fd5b808201808211156106a1576106a1610678565b92915050565b60608152600084518060608401526106c6816080850160208901610638565b60208301949094525060408101919091526080601f909201601f19160101919050565b80820281158282048414176106a1576106a1610678565b818103818111156106a1576106a161067856fea26469706673582212207dc0e6d5b87fbe6f4674a34f2141b8043a5309a0721a8cce99a8c48b95299e4564736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addProductQuantity(string,uint256,uint256)": {
+        "details": "Function to add product quantities",
+        "params": {
+          "price": "The price of the product",
+          "product": "The name of the product",
+          "quantity": "The quantity of the product to add"
+        }
+      },
+      "getBalance()": {
+        "details": "Function to get the contract balance"
+      },
+      "purchaseProduct(string,uint256)": {
+        "details": "Function to purchase a product",
+        "params": {
+          "product": "The name of the product",
+          "quantity": "The quantity of the product to purchase"
+        }
+      },
+      "withdraw()": {
+        "details": "Function to withdraw the contract balance"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 3,
+        "contract": "contracts/BuyAProduct.sol:EcommercePlatform",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address_payable"
+      },
+      {
+        "astId": 7,
+        "contract": "contracts/BuyAProduct.sol:EcommercePlatform",
+        "label": "productPrices",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_string_memory_ptr,t_uint256)"
+      },
+      {
+        "astId": 13,
+        "contract": "contracts/BuyAProduct.sol:EcommercePlatform",
+        "label": "productQuantities",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_string_memory_ptr,t_mapping(t_address,t_uint256))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_address_payable": {
+        "encoding": "inplace",
+        "label": "address payable",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_string_memory_ptr,t_mapping(t_address,t_uint256))": {
+        "encoding": "mapping",
+        "key": "t_string_memory_ptr",
+        "label": "mapping(string => mapping(address => uint256))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_uint256)"
+      },
+      "t_mapping(t_string_memory_ptr,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_string_memory_ptr",
+        "label": "mapping(string => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_string_memory_ptr": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
